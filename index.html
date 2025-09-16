@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SHP Postcode Matching Tool</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <h1>Social Housing Provider & Substation Matcher</h1>
+
+  <p>Upload a CSV with two columns: <strong>postcode</strong> and <strong>substation</strong>.</p>
+
+  <input type="file" id="inputFile" accept=".csv">
+  <button id="processBtn" disabled>Process File</button>
+
+  <div id="status" class="status"></div>
+
+  <h2>Results</h2>
+  <table id="results">
+    <thead>
+      <tr>
+        <th>Postcode</th>
+        <th>Substation</th>
+        <th>Provider</th>
+        <th>Substation Value</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <button id="downloadBtn" class="secondary" disabled>Download CSV</button>
+</div>
+
+<!-- Papa Parse for client-side CSV parsing -->
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
